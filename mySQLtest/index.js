@@ -15,31 +15,40 @@ app.get("/", (req, res) => {
 
 app.get("/carinfoitems", (req, res) => {
   let { carNo } = req.query;
-  console.log("carNo", carNo);
   let sql = "SELECT * from carinfoitems where Number = '" + carNo + "' limit 1";
-  console.log("sql", sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
-    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.get("/carinfoitemsall", (req, res) => {
+  let { carNo } = req.query;
+  let sql = "SELECT * from carinfoitems";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
     res.send(rows);
   });
 });
 
 app.get("/disinfectionitems", (req, res) => {
-  let { carNo } = req.query;
-  console.log("carNo", carNo);
   let sql =
     "SELECT * from disinfectionitems order by RegistryDate desc limit 1";
-  console.log("sql", sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
-    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.get("/disinfectionitemsall", (req, res) => {
+  let sql = "SELECT * from disinfectionitems";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
     res.send(rows);
   });
 });
 
 app.get("/operatoritems", (req, res) => {
-  console.log("111", 111);
   let { Type, Name } = req.query;
   let sql =
     "SELECT * from operatoritems where Name = '" +
@@ -47,10 +56,16 @@ app.get("/operatoritems", (req, res) => {
     "' and Type = '" +
     Type +
     "'  order by RegistryDate desc limit 1";
-  console.log("sql", sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
-    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.get("/operatoritemsall", (req, res) => {
+  let sql = "SELECT * from operatoritems ";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
     res.send(rows);
   });
 });
@@ -61,13 +76,10 @@ app.post("/operatoritems", (req, res) => {
   let sql =
     " Insert into operatoritems ( Attached, IssueDate, Name, Phone, Position, RegistryDate, Type) ";
   sql += ` value("${Attached}",now(), "${Name}", "${Phone}", "${Position}", now(), "${Type}") `;
-  console.log("sql", sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
-    console.log(rows);
   });
 
-  console.log("body:", req.body);
   return res.sendStatus(200);
 });
 
@@ -77,7 +89,6 @@ app.post("/operatoritems", (req, res) => {
   let sql =
     " Insert into operatoritems ( Attached, IssueDate, Name, Phone, Position, RegistryDate, Type) ";
   sql += ` value("${Attached}",now(), "${Name}", "${Phone}", "${Position}", now(), "${Type}") `;
-  console.log("sql", sql);
   connection.query(sql, (error) => {
     if (error) throw error;
   });
@@ -143,8 +154,6 @@ app.post("/disinfectionitems", (req, res) => {
 
 app.put("/disinfectionitems/:ID", (req, res) => {
   var ID = req.params.ID;
-  console.log("ID", ID);
-
   if (
     req.body["DContent"] ||
     req.body["Area"] ||
@@ -152,7 +161,6 @@ app.put("/disinfectionitems/:ID", (req, res) => {
     req.body["PointName"]
   ) {
     let { DContent, Area, AreaType, PointName } = req.body;
-    console.log("req.body", req.body);
     let sql = `
      update disinfectionitems SET DContent = '${DContent}', Area = '${Area}', AreaType = '${AreaType}', PointName = '${PointName}' where ID = ${ID}
      
@@ -169,7 +177,6 @@ app.put("/disinfectionitems/:ID", (req, res) => {
 
 app.put("/carinfoitems/:ID", (req, res) => {
   var ID = req.params.ID;
-  console.log("ID", ID);
 
   if (
     req.body["Number"] ||
@@ -178,7 +185,6 @@ app.put("/carinfoitems/:ID", (req, res) => {
     req.body["Owner"]
   ) {
     let { Number, CName, DContent, Owner } = req.body;
-    console.log("req.body", req.body);
     let sql = `
        update carinfoitems SET Number = '${Number}', CName = '${CName}', DContent = '${DContent}', Owner = '${Owner}' where ID = ${ID}
        
@@ -195,7 +201,6 @@ app.put("/carinfoitems/:ID", (req, res) => {
 
 app.put("/operatoritems/:ID", (req, res) => {
   var ID = req.params.ID;
-  console.log("ID", ID);
 
   if (
     req.body["Name"] ||
@@ -204,7 +209,6 @@ app.put("/operatoritems/:ID", (req, res) => {
     req.body["Attached"]
   ) {
     let { Name, Phone, Position, Attached } = req.body;
-    console.log("req.body", req.body);
     let sql = `
        update operatoritems SET Name = '${Name}', Phone = '${Phone}', Position = '${Position}', Attached = '${Attached}' where ID = ${ID}
        
@@ -219,6 +223,4 @@ app.put("/operatoritems/:ID", (req, res) => {
   }
 });
 
-app.listen(app.get("port"), () => {
-  console.log("Express server listening on port " + app.get("port"));
-});
+app.listen(app.get("port"), () => {});
