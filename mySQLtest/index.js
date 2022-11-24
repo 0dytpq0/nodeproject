@@ -3,8 +3,10 @@ const mysql = require("mysql");
 const dbconfig = require("./config/database.js");
 const connection = mysql.createConnection(dbconfig);
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 app.set("port", process.env.PORT || 4000);
@@ -62,8 +64,25 @@ app.get("/operatoritems", (req, res) => {
   });
 });
 
+app.get("/settingitems", (req, res) => {
+  let { Name } = req.query;
+  let sql = "SELECT * from settingitems where Name = '" + Name + "' limit 1";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
 app.get("/operatoritemsall", (req, res) => {
   let sql = "SELECT * from operatoritems ";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
+app.get("/settingitemsall", (req, res) => {
+  let sql = "SELECT * from settingitems ";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -152,10 +171,22 @@ app.post("/disinfectionitems", (req, res) => {
   return res.sendStatus(200);
 });
 
-app.put("/disinfectionitems/:ID", (req, res) => {
-  var ID = req.params.ID;
+app.post("/settingitems", (req, res) => {
+  let { Name, Value } = req.body;
+
+  let sql = " Insert into settingitems ( IssueDate,Name,Value) ";
+  sql += ` value(now(), "${Name}", "${Value}") `;
+  connection.query(sql, (error) => {
+    if (error) throw error;
+  });
+
+  return res.sendStatus(200);
+});
+
+app.put("/disinfectionitems/:Name", (req, res) => {
+  var Name = req.params.Name;
   if (
-    req.body["DContent"] ||
+    req.body["tDConten"] ||
     req.body["Area"] ||
     req.body["AreaType"] ||
     req.body["PointName"]
@@ -213,6 +244,24 @@ app.put("/operatoritems/:ID", (req, res) => {
        update operatoritems SET Name = '${Name}', Phone = '${Phone}', Position = '${Position}', Attached = '${Attached}' where ID = ${ID}
        
       `;
+    connection.query(sql, (error) => {
+      if (error) {
+        return res.send("FAIL");
+      }
+    });
+
+    return res.sendStatus(200);
+  }
+});
+
+app.put("/settingitems/", (req, res) => {
+  let { Name, Value } = req.body;
+  console.log("req", req);
+  console.log("Name,Value", Name, Value);
+  if (req.body["Value"]) {
+    console.log("Value", req.body["Value"]);
+    let sql = `
+     update settingitems SET Value = '${Value}' where Name = '${Name}'    `;
     connection.query(sql, (error) => {
       if (error) {
         return res.send("FAIL");
