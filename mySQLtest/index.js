@@ -333,7 +333,7 @@ let sendTime = Date.now();
 var str = "TIME20221201113500";
 let bytes = []; // char codes
 let mqtt = require("mqtt");
-let carNumImg = null;
+let carInfo = null;
 const options = {
   keepalive: 3000,
   protocolId: "MQTT",
@@ -406,18 +406,25 @@ connection.query(sql, (error, rows) => {
   });
   // 서버로부터 받은 데이터를 화면에 출력
   socket?.on("data", function (chunk) {
-    let convChunk = iconv.decode(chunk, "euc-kr");
-    convChunk = convChunk.substring(1, convChunk.length);
-    convChunk = convChunk.substring(0, convChunk.length - 1);
+    if (chunk.length === 4) {
+      let convChunk = iconv.decode(chunk, "euc-kr");
+      let vok = convChunk.substring(1, convChunk.length);
+      vok = vok.substring(0, convChunk.length - 1);
+      if (vok.includes("OK")) {
+        isOk = true;
+      }
+    } else {
+      console.log("123", 123);
+      let convChunk = iconv.decode(chunk, "euc-kr");
+      convChunk = convChunk.substring(1, convChunk.length);
+      convChunk = convChunk.substring(0, convChunk.length - 1);
 
-    console.log("convChunk", convChunk);
-    console.log("chunk", convChunk[0]);
-    console.log("chunk", convChunk[convChunk.length - 1]);
-    carNumImg = convChunk.split("#");
-
-    console.log("carNumImg", carNumImg);
-    if (convChunk.length === 4) {
-      isOk = true;
+      carInfo = convChunk.split("#");
+      client.publish(
+        "CCTV",
+        `{"CMD": "CARINFO","CHANNEL": "${carInfo[0]}", "CARNUMBER": "${carInfo[1]}", "TYPE":"${carInfo[2]}", "IMG":"${carInfo[3]}" }`
+      );
+      console.log("carinfo", carInfo);
     }
 
     //chunk가 있으면 OK를 보내줘야돤다.
