@@ -5,6 +5,7 @@ const connection = mysql.createConnection(dbconfig);
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const path = require("path");
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -80,6 +81,16 @@ app.get("/settingitems", (req, res) => {
     "  from settingitems where Name = '" +
     Name +
     "' limit 1";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
+app.get("/settingitemsIP", (req, res) => {
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
+    " from settingitems where Name='IP'";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -322,7 +333,7 @@ let sendTime = Date.now();
 var str = "TIME20221201113500";
 let bytes = []; // char codes
 let mqtt = require("mqtt");
-let ws = require("ws");
+let carNumImg = null;
 const options = {
   keepalive: 3000,
   protocolId: "MQTT",
@@ -344,7 +355,6 @@ var client = mqtt.connect("mqtt://localhost", {
 client.on("connect", function () {
   console.log("connected");
 });
-client.publish("test", "sasd"); //publish 성공
 for (var i = 0; i < str.length; ++i) {
   var code = str.charCodeAt(i);
 
@@ -375,21 +385,27 @@ connection.query(sql, (error, rows) => {
     setInterval(function () {
       isOk ? (false, (failCount = 0)) : (failCount += 1);
       if (failCount >= 3) {
+        client.publish("CCTVISOK", `{"CMD": "CCTVISOK","STATUS": 0}`); //publish 성공
+
         //send mqtt 실패 message -> 웹에서 똑딱
+      } else {
+        client.publish("CCTVISOK", `{"CMD": "CCTVISOK","STATUS": 1}`); //publish 성공
       }
       socket.write(bytes);
       sendTime = Date.now();
       // isOk = false;
-    }, 1000 * 10);
+    }, 1000 * 3);
   });
-
   // 서버로부터 받은 데이터를 화면에 출력
   socket?.on("data", function (chunk) {
     let convChunk = iconv.decode(chunk, "euc-kr");
     console.log("convChunk", convChunk);
     console.log("convChunk.length", convChunk.length);
     console.log("failCount", failCount);
+    carNumImg = convChunk.split("#");
 
+    console.log("dv", dv);
+    console.log("carNumImg", carNumImg);
     if (convChunk.length === 4) {
       isOk = true;
     }
@@ -416,5 +432,7 @@ connection.query(sql, (error, rows) => {
 });
 
 console.log("socket", socket);
+
+app.use("/images", express.static(path.resolve(__dirname, "./images"))); //image
 
 app.listen(app.get("port"), () => {});
