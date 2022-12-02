@@ -314,8 +314,37 @@ app.put("/settingitems/", (req, res) => {
 
 var net = require("net");
 let socket = null;
+var fs = require("fs");
+var iconv = require("iconv-lite");
+let isOk = false;
+let failCount = 0;
+let sendTime = Date.now();
 var str = "TIME20221201113500";
 let bytes = []; // char codes
+let mqtt = require("mqtt");
+let ws = require("ws");
+const options = {
+  keepalive: 3000,
+  protocolId: "MQTT",
+  protocolVersion: 4,
+  clean: true,
+  reconnectPeriod: 1000,
+  connectTimeout: 10 * 60 * 1000,
+  will: {
+    topic: "WillMsg",
+    payload: "Connection Closed abnormally..!",
+    qos: 0,
+    retain: false,
+  },
+  rejectUnauthorized: false,
+};
+var client = mqtt.connect("mqtt://localhost", {
+  clientId: "mqttjs01",
+});
+client.on("connect", function () {
+  console.log("connected");
+});
+client.publish("test", "sasd"); //publish 성공
 for (var i = 0; i < str.length; ++i) {
   var code = str.charCodeAt(i);
 
@@ -325,16 +354,13 @@ bytes.unshift(02);
 bytes.push(03);
 bytes = Buffer.from(bytes);
 
-console.log("bytes", bytes);
-
-// 서버 5000번 포트로 접속
+// 서버 15000번 포트로 접속
 let sql =
   "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
   "  from settingitems where Name = 'IP' limit 1";
 connection.query(sql, (error, rows) => {
   if (error) throw error;
 
-  console.log("rows", rows);
   let data = rows[0]?.Value;
   data = data?.replaceAll("`", '"');
   let parsedValue = JSON.parse(data);
@@ -347,13 +373,27 @@ connection.query(sql, (error, rows) => {
 
     // 1000ms의 간격으로 banana hong을 서버로 요청
     setInterval(function () {
+      isOk ? (false, (failCount = 0)) : (failCount += 1);
+      if (failCount >= 3) {
+        //send mqtt 실패 message -> 웹에서 똑딱
+      }
       socket.write(bytes);
-    }, 1000);
+      sendTime = Date.now();
+      // isOk = false;
+    }, 1000 * 10);
   });
 
   // 서버로부터 받은 데이터를 화면에 출력
   socket?.on("data", function (chunk) {
-    console.log("recv:" + chunk.toString());
+    let convChunk = iconv.decode(chunk, "euc-kr");
+    console.log("convChunk", convChunk);
+    console.log("convChunk.length", convChunk.length);
+    console.log("failCount", failCount);
+
+    if (convChunk.length === 4) {
+      isOk = true;
+    }
+
     //chunk가 있으면 OK를 보내줘야돤다.
   });
   // 접속이 종료됬을때 메시지 출력
