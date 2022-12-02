@@ -327,7 +327,7 @@ var net = require("net");
 let socket = null;
 var fs = require("fs");
 var iconv = require("iconv-lite");
-let isOk = false;
+let isOk = true;
 let failCount = 0;
 let sendTime = Date.now();
 var str = "TIME20221201113500";
@@ -384,27 +384,37 @@ connection.query(sql, (error, rows) => {
     // 1000ms의 간격으로 banana hong을 서버로 요청
     setInterval(function () {
       isOk ? (false, (failCount = 0)) : (failCount += 1);
-      if (failCount >= 3) {
-        client.publish("CCTVISOK", `{"CMD": "CCTVISOK","STATUS": 0}`); //publish 성공
-
-        //send mqtt 실패 message -> 웹에서 똑딱
-      } else {
-        client.publish("CCTVISOK", `{"CMD": "CCTVISOK","STATUS": 1}`); //publish 성공
+      client.publish(
+        "CCTV",
+        `{"CMD": "CCTVISOK","STATUS": ${isOk ? 1 : 0},"FAILCOUNT":${failCount}}`
+      ); //publish 성공
+      if (failCount > 3) {
+        client.publish(
+          "CCTV",
+          `{"CMD": "CCTVISFAIL","STATUS": ${
+            isOk ? 1 : 0
+          },"FAILCOUNT":${failCount}}`
+        );
+        failCount = 0;
       }
+      //send mqtt 실패 message -> 웹에서 똑딱
+
       socket.write(bytes);
       sendTime = Date.now();
-      // isOk = false;
-    }, 1000 * 3);
+      isOk = false;
+    }, 1000 * 2);
   });
   // 서버로부터 받은 데이터를 화면에 출력
   socket?.on("data", function (chunk) {
     let convChunk = iconv.decode(chunk, "euc-kr");
+    convChunk = convChunk.substring(1, convChunk.length);
+    convChunk = convChunk.substring(0, convChunk.length - 1);
+
     console.log("convChunk", convChunk);
-    console.log("convChunk.length", convChunk.length);
-    console.log("failCount", failCount);
+    console.log("chunk", convChunk[0]);
+    console.log("chunk", convChunk[convChunk.length - 1]);
     carNumImg = convChunk.split("#");
 
-    console.log("dv", dv);
     console.log("carNumImg", carNumImg);
     if (convChunk.length === 4) {
       isOk = true;
