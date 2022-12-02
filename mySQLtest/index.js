@@ -4,7 +4,6 @@ const dbconfig = require("./config/database.js");
 const connection = mysql.createConnection(dbconfig);
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,7 +16,11 @@ app.get("/", (req, res) => {
 
 app.get("/carinfoitems", (req, res) => {
   let { carNo } = req.query;
-  let sql = "SELECT * from carinfoitems where Number = '" + carNo + "' limit 1";
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems where Number = '" +
+    carNo +
+    "' limit 1";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -26,7 +29,9 @@ app.get("/carinfoitems", (req, res) => {
 
 app.get("/carinfoitemsall", (req, res) => {
   let { carNo } = req.query;
-  let sql = "SELECT * from carinfoitems";
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -35,7 +40,8 @@ app.get("/carinfoitemsall", (req, res) => {
 
 app.get("/disinfectionitems", (req, res) => {
   let sql =
-    "SELECT * from disinfectionitems order by RegistryDate desc limit 1";
+    "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
+    "from disinfectionitems order by RegistryDate desc limit 1";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -43,7 +49,9 @@ app.get("/disinfectionitems", (req, res) => {
 });
 
 app.get("/disinfectionitemsall", (req, res) => {
-  let sql = "SELECT * from disinfectionitems";
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
+    "from disinfectionitems";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -53,7 +61,8 @@ app.get("/disinfectionitemsall", (req, res) => {
 app.get("/operatoritems", (req, res) => {
   let { Type, Name } = req.query;
   let sql =
-    "SELECT * from operatoritems where Name = '" +
+    "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
+    "from operatoritems where Name = '" +
     Name +
     "' and Type = '" +
     Type +
@@ -66,15 +75,30 @@ app.get("/operatoritems", (req, res) => {
 
 app.get("/settingitems", (req, res) => {
   let { Name } = req.query;
-  let sql = "SELECT * from settingitems where Name = '" + Name + "' limit 1";
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
+    "  from settingitems where Name = '" +
+    Name +
+    "' limit 1";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
   });
 });
 
-app.get("/operatoritemsall", (req, res) => {
-  let sql = "SELECT * from operatoritems ";
+app.get("/operatoritemsallE", (req, res) => {
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
+    " from operatoritems where Type='E'";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+app.get("/operatoritemsallC", (req, res) => {
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
+    " from operatoritems where Type ='C'";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -82,7 +106,9 @@ app.get("/operatoritemsall", (req, res) => {
 });
 
 app.get("/settingitemsall", (req, res) => {
-  let sql = "SELECT * from settingitems ";
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value " +
+    "  from settingitems ";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -271,5 +297,84 @@ app.put("/settingitems/", (req, res) => {
     return res.sendStatus(200);
   }
 });
+// app.put("/settingitems/", (req, res) => {
+//   let { Name, Value } = req.body;
+//   if (req.body["Value"]) {
+//     let sql = `
+//      update settingitems SET Value = '${Value}' where Name = '${Name}'    `;
+//     connection.query(sql, (error) => {
+//       if (error) {
+//         return res.send("FAIL");
+//       }
+//     });
+
+//     return res.sendStatus(200);
+//   }
+// }); IP setting값 변경. name,value값 설정해서 해주면 된다.
+
+var net = require("net");
+let socket = null;
+var str = "TIME20221201113500";
+let bytes = []; // char codes
+for (var i = 0; i < str.length; ++i) {
+  var code = str.charCodeAt(i);
+
+  bytes = bytes.concat([code]);
+}
+bytes.unshift(02);
+bytes.push(03);
+bytes = Buffer.from(bytes);
+
+console.log("bytes", bytes);
+
+// 서버 5000번 포트로 접속
+let sql =
+  "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
+  "  from settingitems where Name = 'IP' limit 1";
+connection.query(sql, (error, rows) => {
+  if (error) throw error;
+
+  console.log("rows", rows);
+  let data = rows[0]?.Value;
+  data = data?.replaceAll("`", '"');
+  let parsedValue = JSON.parse(data);
+  socket = net.connect({
+    host: parsedValue.IP,
+    port: Number(parsedValue.PORT),
+  });
+  socket?.on("connect", function () {
+    console.log("connected to server!");
+
+    // 1000ms의 간격으로 banana hong을 서버로 요청
+    setInterval(function () {
+      socket.write(bytes);
+    }, 1000);
+  });
+
+  // 서버로부터 받은 데이터를 화면에 출력
+  socket?.on("data", function (chunk) {
+    console.log("recv:" + chunk.toString());
+    //chunk가 있으면 OK를 보내줘야돤다.
+  });
+  // 접속이 종료됬을때 메시지 출력
+  socket?.on("end", function () {
+    console.log("disconnected.");
+  });
+  // 에러가 발생할때 에러메시지 화면에 출력
+  socket?.on("error", function (err) {
+    console.log(err);
+  });
+  // connection에서 timeout이 발생하면 메시지 출력
+  socket?.on("timeout", function () {
+    console.log("connection timeout.");
+  });
+  console.log(
+    "parsedValue.IP, parsedValue.PORT",
+    parsedValue.IP,
+    parsedValue.PORT
+  );
+});
+
+console.log("socket", socket);
 
 app.listen(app.get("port"), () => {});
