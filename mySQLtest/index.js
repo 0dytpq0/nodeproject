@@ -39,6 +39,34 @@ app.get("/carinfoitemsall", (req, res) => {
   });
 });
 
+app.get("/carinfoitemsDate", (req, res) => {
+  let { SDate, EDate } = req.query;
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems where STR_TO_DATE('" +
+    SDate +
+    "', '%Y-%m-%d 00:00:00') <= IssueDate and IssueDate < DATE_ADD(STR_TO_DATE('" +
+    EDate +
+    "', '%Y-%m-%d'),INTERVAL 1 DAY)";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
+app.get("/carinfoitemsallDate", (req, res) => {
+  let { Number } = req.query;
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems where Number= '" +
+    Number +
+    "' order by IssueDate desc limit 1 ";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
 app.get("/disinfectionitems", (req, res) => {
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
@@ -293,8 +321,6 @@ app.put("/operatoritems/:ID", (req, res) => {
 
 app.put("/settingitems/", (req, res) => {
   let { Name, Value } = req.body;
-  console.log("req", req);
-  console.log("Name,Value", Name, Value);
   if (req.body["Value"]) {
     console.log("Value", req.body["Value"]);
     let sql = `
@@ -402,7 +428,7 @@ connection.query(sql, (error, rows) => {
       socket.write(bytes);
       sendTime = Date.now();
       isOk = false;
-    }, 1000 * 2);
+    }, 1000 * 10);
   });
   // 서버로부터 받은 데이터를 화면에 출력
   socket?.on("data", function (chunk) {
@@ -414,17 +440,38 @@ connection.query(sql, (error, rows) => {
         isOk = true;
       }
     } else {
-      console.log("123", 123);
       let convChunk = iconv.decode(chunk, "euc-kr");
       convChunk = convChunk.substring(1, convChunk.length);
       convChunk = convChunk.substring(0, convChunk.length - 1);
 
       carInfo = convChunk.split("#");
+      console.log("carInfo", carInfo);
+      if (carInfo.length > 0) {
+        let car = carInfo[0];
+
+        if (car.substring(0, 2) === "OK" && car.length >= 7) {
+          if (car.includes("CH0")) {
+            carInfo[0] = "CH0";
+          } else if (car.includes("CH1")) {
+            carInfo[0] = "CH1";
+          } else if (car.includes("CH2")) {
+            carInfo[0] = "CH2";
+          } else if (car.includes("CH3")) {
+            carInfo[0] = "CH3";
+          } else if (car.includes("CH4")) {
+            carInfo[0] = "CH4";
+          } else {
+            carInfo[0] = "CH0";
+          }
+
+          console.log("carInfoInININ", carInfo[0]);
+        }
+      }
+      console.log("carInfonew", carInfo);
       client.publish(
         "CCTV",
         `{"CMD": "CARINFO","CHANNEL": "${carInfo[0]}", "CARNUMBER": "${carInfo[1]}", "TYPE":"${carInfo[2]}", "IMG":"${carInfo[3]}" }`
       );
-      console.log("carinfo", carInfo);
     }
 
     //chunk가 있으면 OK를 보내줘야돤다.
@@ -450,6 +497,6 @@ connection.query(sql, (error, rows) => {
 
 console.log("socket", socket);
 
-app.use("/images", express.static(path.resolve(__dirname, "./images"))); //image
+app.use("/images", express.static(path.resolve(__dirname, "../../images"))); //image
 
 app.listen(app.get("port"), () => {});
