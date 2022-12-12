@@ -422,13 +422,41 @@ connection.query(sql, (error, rows) => {
   let data = rows[0]?.Value;
   data = data?.replaceAll("`", '"');
   let parsedValue = JSON.parse(data);
-  socket = net.connect({
-    host: parsedValue.TCPIP,
-    port: Number(parsedValue.TCPPORT),
+  try {
+    socket = net.connect({
+      host: parsedValue.TCPIP,
+      port: Number(parsedValue.TCPPORT),
+    });
+  } catch (error) {}
+  let interval = null;
+  let retrying = false;
+  socket.on("close", function (e) {
+    console.log("close", "connection  closed -> " + e);
+    if (!retrying) {
+      retrying = true;
+      console.log("Reconnecting...");
+    }
+    interval = setInterval(() => {
+      try {
+        socket = net
+          .connect({
+            host: parsedValue.TCPIP,
+            port: Number(parsedValue.TCPPORT),
+          })
+          .on("error", () => {
+            console.log("error", "연결실패");
+          })
+          .on("connect", socketRun)
+          .on("data", socketData);
+      } catch (error) {}
+    }, 3000);
   });
-  socket?.on("connect", function () {
+  console.log("socket", socket);
+  function socketRun() {
     console.log("connected to server!");
-
+    if (interval !== null) {
+      clearInterval(interval);
+    }
     // 1000ms의 간격으로 banana hong을 서버로 요청
     setInterval(function () {
       isOk
@@ -456,9 +484,8 @@ connection.query(sql, (error, rows) => {
       sendTime = Date.now();
       isOk = false;
     }, 1000 * 10);
-  });
-  // 서버로부터 받은 데이터를 화면에 출력
-  socket?.on("data", function (chunk) {
+  }
+  function socketData(chunk) {
     if (chunk.length === 4) {
       let convChunk = iconv.decode(chunk, "euc-kr");
       let vok = convChunk.substring(1, convChunk.length);
@@ -500,9 +527,11 @@ connection.query(sql, (error, rows) => {
         `{"CMD": "CARINFO","CHANNEL": "${carInfo[0]}", "CARNUMBER": "${carInfo[1]}", "TYPE":"${carInfo[2]}", "IMG":"${carInfo[3]}" }`
       );
     }
-
     //chunk가 있으면 OK를 보내줘야돤다.
-  });
+  }
+  socket?.on("connect", socketRun);
+  // 서버로부터 받은 데이터를 화면에 출력
+  socket?.on("data", socketData);
   // 접속이 종료됬을때 메시지 출력
   socket?.on("end", function () {
     console.log("disconnected.");
