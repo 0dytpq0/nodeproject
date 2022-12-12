@@ -67,6 +67,19 @@ app.get("/carinfoitemsallDate", (req, res) => {
   });
 });
 
+app.get("/carinfoitemsallPrintIndex", (req, res) => {
+  let { PrintIndex } = req.query;
+  let sql =
+    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems where PrintIndex= '" +
+    PrintIndex +
+    "' order by IssueDate desc limit 1 ";
+  connection.query(sql, (error, rows) => {
+    if (error) throw error;
+    res.send(rows);
+  });
+});
+
 app.get("/disinfectionitems", (req, res) => {
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
@@ -115,10 +128,10 @@ app.get("/settingitems", (req, res) => {
   });
 });
 
-app.get("/settingitemsIP", (req, res) => {
+app.get("/settingitemsConfig", (req, res) => {
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
-    " from settingitems where Name='IP'";
+    " from settingitems where Name='Config'";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -207,7 +220,14 @@ app.post("/carinfoitems", (req, res) => {
     GpsNumber,
     flagYN,
   } = req.body;
-
+  let searchSql = `SELECT COUNT(*) CNT from carinfoitems where PrintIndex = '${PrintIndex}' and Number = '${Number}'`;
+  connection.query(searchSql, (error, rows, fields) => {
+    if (error) throw error;
+    console.log("rows", rows[0]?.CNT);
+    if (rows[0]?.CNT > 0) {
+      return res.send("DUP");
+    }
+  });
   let sql = `
   Insert into carinfoitems ( Address,Area,AreaType,CAttached,CName,CPhone,CPosition
 ,DContent,EAttached,EName,EPhone,EPoint,EPosition,ImagePath,IssueDate,Number,Owner,Phone,PointName
@@ -355,10 +375,12 @@ var fs = require("fs");
 var iconv = require("iconv-lite");
 let isOk = true;
 let failCount = 0;
+let successCount = 0;
 let sendTime = Date.now();
 var str = "TIME20221201113500";
 let bytes = []; // char codes
 let mqtt = require("mqtt");
+const { send } = require("process");
 let carInfo = null;
 const options = {
   keepalive: 3000,
@@ -393,7 +415,7 @@ bytes = Buffer.from(bytes);
 // 서버 15000번 포트로 접속
 let sql =
   "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
-  "  from settingitems where Name = 'IP' limit 1";
+  "  from settingitems where Name = 'Config' limit 1";
 connection.query(sql, (error, rows) => {
   if (error) throw error;
 
@@ -401,18 +423,23 @@ connection.query(sql, (error, rows) => {
   data = data?.replaceAll("`", '"');
   let parsedValue = JSON.parse(data);
   socket = net.connect({
-    host: parsedValue.IP,
-    port: Number(parsedValue.PORT),
+    host: parsedValue.TCPIP,
+    port: Number(parsedValue.TCPPORT),
   });
   socket?.on("connect", function () {
     console.log("connected to server!");
 
     // 1000ms의 간격으로 banana hong을 서버로 요청
     setInterval(function () {
-      isOk ? (false, (failCount = 0)) : (failCount += 1);
+      isOk
+        ? (false, (failCount = 0), (successCount += 1))
+        : ((failCount += 1), (successCount = 0));
+
       client.publish(
         "CCTV",
-        `{"CMD": "CCTVISOK","STATUS": ${isOk ? 1 : 0},"FAILCOUNT":${failCount}}`
+        `{"CMD": "CCTVISOK","STATUS": ${
+          isOk ? 1 : 0
+        },"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount}}`
       ); //publish 성공
       if (failCount > 3) {
         client.publish(
