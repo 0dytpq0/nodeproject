@@ -13,17 +13,18 @@ app.use(bodyParser.json());
 
 app.set('port', process.env.PORT || 4000);
 
-app.get('/', (req, res) => {
-  res.send('Root');
-});
+// app.get('/', (req, res) => {
+//   res.send('Root');
+// });
 
 app.get('/carinfoitems', (req, res) => {
   let { carNo } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
-    ", ifnull(flagYN, '') flagYN from carinfoitems where Number = '" +
+    ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
     carNo +
-    "' limit 1";
+    "%'";
+  console.log('sql :>> ', sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -31,10 +32,13 @@ app.get('/carinfoitems', (req, res) => {
 });
 
 app.get('/carinfoitemsall', (req, res) => {
-  let { carNo } = req.query;
+  let { CarNo } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
-    ", ifnull(flagYN, '') flagYN from carinfoitems";
+    ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
+    CarNo +
+    "%'";
+  console.log('sql :>> ', sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -551,7 +555,7 @@ connection.query(sql, (error, rows) => {
       socket.write(bytes);
       sendTime = Date.now();
       isOk = false;
-    }, 1000 * 10);
+    }, 1000 * 3);
   }
   function socketData(chunk) {
     if (chunk.length === 4) {
@@ -615,12 +619,12 @@ connection.query(sql, (error, rows) => {
   );
 });
 
-app.use('/images', express.static(path.resolve(__dirname, '../../images'))); //image
+app.use('/images', express.static(path.resolve(__dirname, './../images'))); //image
 
-app.use('/', express.static(path.resolve(__dirname, '../client/build')));
+app.use('/', express.static(path.resolve(__dirname, './client/build')));
 app.get('*', (req, res, next) => {
   if (req.path.split('/')[1] === 'static') return next();
-  res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
+  res.sendFile(path.resolve(__dirname, './client/build/index.html'));
 });
 
 app.listen(app.get('port'), () => {});
