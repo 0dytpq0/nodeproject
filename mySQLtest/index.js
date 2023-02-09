@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const mysql = require('mysql');
 const dbconfig = require('./config/database.js');
 const connection = mysql.createConnection(dbconfig);
@@ -7,6 +8,7 @@ const cors = require('cors');
 const app = express();
 const path = require('path');
 const axios = require('axios');
+const moment = require('moment');
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -16,29 +18,35 @@ app.set('port', process.env.PORT || 4000);
 // app.get('/', (req, res) => {
 //   res.send('Root');
 // });
+function log(...text) {
+  for (let i = 0; i < text.length; i++) {
+    console.log(text[i]);
+  }
+}
 
-app.get('/carinfoitems', (req, res) => {
-  let { carNo } = req.query;
-  let sql =
-    "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
-    ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
-    carNo +
-    "%'";
-  console.log('sql :>> ', sql);
-  connection.query(sql, (error, rows) => {
-    if (error) throw error;
-    res.send(rows);
-  });
-});
+// app.get('/carinfoitems', (req, res) => {
+//   let { carNo } = req.query;
+//   let sql =
+//     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
+//     ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
+//     carNo +
+//     "%'";
+//   log('sql :>> ', sql);
+//   connection.query(sql, (error, rows) => {
+//     if (error) throw error;
+//     res.send(rows);
+//   });
+// });
 
 app.get('/carinfoitemsall', (req, res) => {
+  log('get', 'carinfoitemsall_carShowModa');
+
   let { CarNo } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
     ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
     CarNo +
     "%'";
-  console.log('sql :>> ', sql);
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -46,6 +54,7 @@ app.get('/carinfoitemsall', (req, res) => {
 });
 
 app.get('/carinfoitemsDate', (req, res) => {
+  log('get', 'carinfoitemsDate_inquireAll');
   let { SDate, EDate } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
@@ -61,6 +70,11 @@ app.get('/carinfoitemsDate', (req, res) => {
 });
 
 app.get('/carinfoitemsallDate', (req, res) => {
+  log(
+    'get',
+    'carinfoitemsallDate_waitingCar',
+    'carinfoitemsallDate_carinfocontainer'
+  );
   let { Number } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
@@ -74,6 +88,7 @@ app.get('/carinfoitemsallDate', (req, res) => {
 });
 
 app.get('/carinfoitemsallPrintIndex', (req, res) => {
+  log('get', 'carinfoitemsallPrintIndex_printCompleted');
   let { PrintIndex } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
@@ -86,27 +101,28 @@ app.get('/carinfoitemsallPrintIndex', (req, res) => {
   });
 });
 
-app.get('/disinfectionitems', (req, res) => {
-  let sql =
-    "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
-    'from disinfectionitems order by RegistryDate desc limit 1';
-  connection.query(sql, (error, rows) => {
-    if (error) throw error;
-    res.send(rows);
-  });
-});
+// app.get('/disinfectionitems', (req, res) => {
+//   let sql =
+//     "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
+//     'from disinfectionitems order by RegistryDate desc limit 1';
+//   connection.query(sql, (error, rows) => {
+//     if (error) throw error;
+//     res.send(rows);
+//   });
+// });
 
-app.get('/disinfectionitemsall', (req, res) => {
-  let sql =
-    "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
-    'from disinfectionitems';
-  connection.query(sql, (error, rows) => {
-    if (error) throw error;
-    res.send(rows);
-  });
-});
+// app.get('/disinfectionitemsall', (req, res) => {
+//   let sql =
+//     "SELECT ifnull(ID, '') ID , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(DContent, '') DContent , ifnull(IssueDate, '') IssueDate , ifnull(PointName, '') PointName , ifnull(RegistryDate, '') RegistryDate" +
+//     'from disinfectionitems';
+//   connection.query(sql, (error, rows) => {
+//     if (error) throw error;
+//     res.send(rows);
+//   });
+// });
 
 app.get('/operatoritems', (req, res) => {
+  log('get', 'operatoritems_carInfoContainer');
   let { Type, Name } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
@@ -122,6 +138,14 @@ app.get('/operatoritems', (req, res) => {
 });
 
 app.get('/settingitems', (req, res) => {
+  log(
+    'get',
+    'settingitems_actorButtonViewContainer',
+    'settingitems_buttonContainerArea',
+    'settingitems_carInfoContainer',
+    'settingitems_checkerButtonViewContainer',
+    'settingitems_ipChange'
+  );
   let { Name } = req.query;
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
@@ -135,6 +159,7 @@ app.get('/settingitems', (req, res) => {
 });
 
 app.get('/settingitemsConfig', (req, res) => {
+  log('get', 'settingitemsConfig_app.js', 'settingitemsConfig_ipChange');
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value" +
     " from settingitems where Name='Config'";
@@ -145,6 +170,7 @@ app.get('/settingitemsConfig', (req, res) => {
 });
 
 app.get('/operatoritemsallE', (req, res) => {
+  log('get', 'operatoritemsallE_operatorItemsAllE');
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
     " from operatoritems where Type='E'";
@@ -154,6 +180,7 @@ app.get('/operatoritemsallE', (req, res) => {
   });
 });
 app.get('/operatoritemsallC', (req, res) => {
+  log('operatoritemsallC_operatorItemsAllC');
   let sql =
     "SELECT ifnull(ID, '') ID , ifnull(Attached, '') Attached , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Phone, '') Phone , ifnull(Position, '') Position , ifnull(RegistryDate, '') RegistryDate , ifnull(Type, '') Type" +
     " from operatoritems where Type ='C'";
@@ -163,17 +190,18 @@ app.get('/operatoritemsallC', (req, res) => {
   });
 });
 
-app.get('/settingitemsall', (req, res) => {
-  let sql =
-    "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value " +
-    '  from settingitems ';
-  connection.query(sql, (error, rows) => {
-    if (error) throw error;
-    res.send(rows);
-  });
-});
+// app.get('/settingitemsall', (req, res) => {
+//   let sql =
+//     "SELECT ifnull(ID, '') ID , ifnull(IssueDate, '') IssueDate , ifnull(Name, '') Name , ifnull(Value, '') Value " +
+//     '  from settingitems ';
+//   connection.query(sql, (error, rows) => {
+//     if (error) throw error;
+//     res.send(rows);
+//   });
+// });
 
 app.post('/operatoritems', (req, res) => {
+  log('post', 'operatoritems_carInfoContainer');
   let { Attached, Name, Phone, Position, Type } = req.body;
 
   let sql =
@@ -186,20 +214,20 @@ app.post('/operatoritems', (req, res) => {
   return res.sendStatus(200);
 });
 
-app.post('/operatoritems', (req, res) => {
-  let { Attached, Name, Phone, Position, Type } = req.body;
+// app.post('/operatoritems', (req, res) => {
+//   let { Attached, Name, Phone, Position, Type } = req.body;
 
-  let sql =
-    ' Insert into operatoritems ( Attached, IssueDate, Name, Phone, Position, RegistryDate, Type) ';
-  sql += ` value("${Attached}",now(), "${Name}", "${Phone}", "${Position}", now(), "${Type}") `;
-  connection.query(sql, (error) => {
-    if (error) throw error;
-  });
+//   let sql =
+//     ' Insert into operatoritems ( Attached, IssueDate, Name, Phone, Position, RegistryDate, Type) ';
+//   sql += ` value("${Attached}",now(), "${Name}", "${Phone}", "${Position}", now(), "${Type}") `;
+//   connection.query(sql, (error) => {
+//     if (error) throw error;
+//   });
 
-  return res.sendStatus(200);
-});
+//   return res.sendStatus(200);
+// });
 app.post('/websend', (req, res) => {
-  console.log('22222 :>> ', 22222);
+  log('post', 'websend_app.js');
   let {
     PrintIndex,
     Number,
@@ -226,16 +254,12 @@ app.post('/websend', (req, res) => {
     Image,
     RegistryDate,
   } = req.body;
-  console.log('req.body :>> ', req.body);
   let sql = `SELECT Value from settingitems where Name = "Config"`;
   connection.query(sql, (error, rows, fields) => {
     if (error) throw error;
-    console.log('rows[0] :>> ', rows[0]);
 
     let data = rows[0].Value.replaceAll('`', '"');
     let parsedValue = JSON.parse(data);
-
-    console.log('dataparsed :>> ', parsedValue?.WEBURL);
     axios
       .post(`${parsedValue?.WEBURL}`, {
         Number,
@@ -264,11 +288,14 @@ app.post('/websend', (req, res) => {
         CPhone,
         RegistryDate, //추가
       })
-      .then((res, req) => {})
+      .then((res, req) => {
+        log('post', 'parsedValue?.WEBURL(nodejs)');
+      })
       .catch(function (error) {});
   });
 });
 app.post('/carinfoitems', (req, res) => {
+  log('post', 'carinfoitems_app.js');
   let {
     Address,
     Area,
@@ -317,103 +344,104 @@ app.post('/carinfoitems', (req, res) => {
   return res.sendStatus(200);
 });
 
-app.post('/disinfectionitems', (req, res) => {
-  let { Area, AreaType, DContent, PointName } = req.body;
+// app.post('/disinfectionitems', (req, res) => {
+//   let { Area, AreaType, DContent, PointName } = req.body;
 
-  let sql =
-    ' Insert into disinfectionitems (Area, AreaType, DContent, IssueDate, PointName, RegistryDate) ';
-  sql += ` value("${Area}", "${AreaType}", "${DContent}",now(), "${PointName}", now()) `;
-  connection.query(sql, (error) => {
-    if (error) throw error;
-  });
+//   let sql =
+//     ' Insert into disinfectionitems (Area, AreaType, DContent, IssueDate, PointName, RegistryDate) ';
+//   sql += ` value("${Area}", "${AreaType}", "${DContent}",now(), "${PointName}", now()) `;
+//   connection.query(sql, (error) => {
+//     if (error) throw error;
+//   });
 
-  return res.sendStatus(200);
-});
+//   return res.sendStatus(200);
+// });
 
-app.post('/settingitems', (req, res) => {
-  let { Name, Value } = req.body;
+// app.post('/settingitems', (req, res) => {
+//   let { Name, Value } = req.body;
 
-  let sql = ' Insert into settingitems ( IssueDate,Name,Value) ';
-  sql += ` value(now(), "${Name}", "${Value}") `;
-  connection.query(sql, (error) => {
-    if (error) throw error;
-  });
+//   let sql = ' Insert into settingitems ( IssueDate,Name,Value) ';
+//   sql += ` value(now(), "${Name}", "${Value}") `;
+//   connection.query(sql, (error) => {
+//     if (error) throw error;
+//   });
 
-  return res.sendStatus(200);
-});
+//   return res.sendStatus(200);
+// });
 
-app.put('/disinfectionitems/:Name', (req, res) => {
-  var Name = req.params.Name;
-  if (
-    req.body['tDConten'] ||
-    req.body['Area'] ||
-    req.body['AreaType'] ||
-    req.body['PointName']
-  ) {
-    let { DContent, Area, AreaType, PointName } = req.body;
-    let sql = `
-     update disinfectionitems SET DContent = '${DContent}', Area = '${Area}', AreaType = '${AreaType}', PointName = '${PointName}' where ID = ${ID}
-     
-    `;
-    connection.query(sql, (error) => {
-      if (error) {
-        return res.send('FAIL');
-      }
-    });
+// app.put('/disinfectionitems/:Name', (req, res) => {
+//   var Name = req.params.Name;
+//   if (
+//     req.body['tDConten'] ||
+//     req.body['Area'] ||
+//     req.body['AreaType'] ||
+//     req.body['PointName']
+//   ) {
+//     let { DContent, Area, AreaType, PointName } = req.body;
+//     let sql = `
+//      update disinfectionitems SET DContent = '${DContent}', Area = '${Area}', AreaType = '${AreaType}', PointName = '${PointName}' where ID = ${ID}
 
-    return res.sendStatus(200);
-  }
-});
+//     `;
+//     connection.query(sql, (error) => {
+//       if (error) {
+//         return res.send('FAIL');
+//       }
+//     });
 
-app.put('/carinfoitems/:ID', (req, res) => {
-  var ID = req.params.ID;
+//     return res.sendStatus(200);
+//   }
+// });
 
-  if (
-    req.body['Number'] ||
-    req.body['CName'] ||
-    req.body['DContent'] ||
-    req.body['Owner']
-  ) {
-    let { Number, CName, DContent, Owner } = req.body;
-    let sql = `
-       update carinfoitems SET Number = '${Number}', CName = '${CName}', DContent = '${DContent}', Owner = '${Owner}' where ID = ${ID}
-       
-      `;
-    connection.query(sql, (error) => {
-      if (error) {
-        return res.send('FAIL');
-      }
-    });
+// app.put('/carinfoitems/:ID', (req, res) => {
+//   var ID = req.params.ID;
 
-    return res.sendStatus(200);
-  }
-});
+//   if (
+//     req.body['Number'] ||
+//     req.body['CName'] ||
+//     req.body['DContent'] ||
+//     req.body['Owner']
+//   ) {
+//     let { Number, CName, DContent, Owner } = req.body;
+//     let sql = `
+//        update carinfoitems SET Number = '${Number}', CName = '${CName}', DContent = '${DContent}', Owner = '${Owner}' where ID = ${ID}
 
-app.put('/operatoritems/:ID', (req, res) => {
-  var ID = req.params.ID;
+//       `;
+//     connection.query(sql, (error) => {
+//       if (error) {
+//         return res.send('FAIL');
+//       }
+//     });
 
-  if (
-    req.body['Name'] ||
-    req.body['Phone'] ||
-    req.body['Position'] ||
-    req.body['Attached']
-  ) {
-    let { Name, Phone, Position, Attached } = req.body;
-    let sql = `
-       update operatoritems SET Name = '${Name}', Phone = '${Phone}', Position = '${Position}', Attached = '${Attached}' where ID = ${ID}
-       
-      `;
-    connection.query(sql, (error) => {
-      if (error) {
-        return res.send('FAIL');
-      }
-    });
+//     return res.sendStatus(200);
+//   }
+// });
 
-    return res.sendStatus(200);
-  }
-});
+// app.put('/operatoritems/:ID', (req, res) => {
+//   var ID = req.params.ID;
+
+//   if (
+//     req.body['Name'] ||
+//     req.body['Phone'] ||
+//     req.body['Position'] ||
+//     req.body['Attached']
+//   ) {
+//     let { Name, Phone, Position, Attached } = req.body;
+//     let sql = `
+//        update operatoritems SET Name = '${Name}', Phone = '${Phone}', Position = '${Position}', Attached = '${Attached}' where ID = ${ID}
+
+//       `;
+//     connection.query(sql, (error) => {
+//       if (error) {
+//         return res.send('FAIL');
+//       }
+//     });
+
+//     return res.sendStatus(200);
+//   }
+// });
 
 app.put('/settingitems/', (req, res) => {
+  log('put', 'settingitems_carinfoContainer', 'settingitems_ipChange');
   let { Name, Value } = req.body;
   if (req.body['Value']) {
     let sql = `
@@ -441,10 +469,9 @@ app.put('/settingitems/', (req, res) => {
 //     return res.sendStatus(200);
 //   }
 // }); IP setting값 변경. name,value값 설정해서 해주면 된다.
-
+const dateTime = moment().format('YY/MM/DD-HH:mm:ss');
 var net = require('net');
 let socket = null;
-var fs = require('fs');
 var iconv = require('iconv-lite');
 let isOk = true;
 let failCount = 0;
@@ -474,7 +501,7 @@ var client = mqtt.connect('mqtt://localhost', {
   clientId: 'mqttjs01',
 });
 client.on('connect', function () {
-  console.log('connected');
+  log('TCPIP connected');
 });
 for (var i = 0; i < str.length; ++i) {
   var code = str.charCodeAt(i);
@@ -504,10 +531,10 @@ connection.query(sql, (error, rows) => {
   let interval = null;
   let retrying = false;
   socket.on('close', function (e) {
-    console.log('close', 'connection  closed -> ' + e);
+    log('close', 'connection  closed -> ' + e);
     if (!retrying) {
       retrying = true;
-      console.log('Reconnecting...');
+      log('Reconnecting...');
     }
     interval = setInterval(() => {
       try {
@@ -517,15 +544,15 @@ connection.query(sql, (error, rows) => {
             port: Number(parsedValue.TCPPORT),
           })
           .on('error', () => {
-            console.log('error', '연결실패');
+            log('error', '연결실패');
           })
           .on('connect', socketRun)
           .on('data', socketData);
       } catch (error) {}
-    }, 3000);
+    }, 1000 * 10);
   });
   function socketRun() {
-    console.log('connected to server!');
+    log('connected to server!');
     if (interval !== null) {
       clearInterval(interval);
     }
@@ -539,14 +566,14 @@ connection.query(sql, (error, rows) => {
         'CCTV',
         `{"CMD": "CCTVISOK","STATUS": ${
           isOk ? 1 : 0
-        },"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount}}`
+        },"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
       ); //publish 성공
       if (failCount > 3) {
         client.publish(
           'CCTV',
           `{"CMD": "CCTVISFAIL","STATUS": ${
             isOk ? 1 : 0
-          },"FAILCOUNT":${failCount}}`
+          },"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
         );
         failCount = 0;
       }
@@ -555,9 +582,12 @@ connection.query(sql, (error, rows) => {
       socket.write(bytes);
       sendTime = Date.now();
       isOk = false;
-    }, 1000 * 3);
+      log('mqtt timer');
+    }, 1000 * 10);
   }
   function socketData(chunk) {
+    log('socketData(cctv 사진 데이터)', chunk.length, chunk);
+
     if (chunk.length === 4) {
       let convChunk = iconv.decode(chunk, 'euc-kr');
       let vok = convChunk.substring(1, convChunk.length);
@@ -571,6 +601,7 @@ connection.query(sql, (error, rows) => {
       convChunk = convChunk.substring(0, convChunk.length - 1);
 
       carInfo = convChunk.split('#');
+      log(carInfo);
       if (carInfo.length > 0) {
         let car = carInfo[0];
 
@@ -592,7 +623,7 @@ connection.query(sql, (error, rows) => {
       }
       client.publish(
         'CCTV',
-        `{"CMD": "CARINFO","CHANNEL": "${carInfo[0]}", "CARNUMBER": "${carInfo[1]}", "TYPE":"${carInfo[2]}", "IMG":"${carInfo[3]}" }`
+        `{"CMD": "CARINFO","CHANNEL": "${carInfo[0]}", "CARNUMBER": "${carInfo[1]}", "TYPE":"${carInfo[2]}", "IMG":"${carInfo[3]}","dateTime":"${dateTime}" }`
       );
     }
     //chunk가 있으면 OK를 보내줘야돤다.
@@ -602,29 +633,30 @@ connection.query(sql, (error, rows) => {
   socket?.on('data', socketData);
   // 접속이 종료됬을때 메시지 출력
   socket?.on('end', function () {
-    console.log('disconnected.');
+    log('disconnected.');
   });
   // 에러가 발생할때 에러메시지 화면에 출력
   socket?.on('error', function (err) {
-    console.log(err);
+    log(err);
   });
   // connection에서 timeout이 발생하면 메시지 출력
   socket?.on('timeout', function () {
-    console.log('connection timeout.');
+    log('connection timeout.');
   });
-  console.log(
-    'parsedValue.IP, parsedValue.PORT',
-    parsedValue.IP,
-    parsedValue.PORT
-  );
+  log('parsedValue.IP, parsedValue.PORT', parsedValue.IP, parsedValue.PORT);
 });
 
-app.use('/images', express.static(path.resolve(__dirname, './../images'))); //image
+app.use('/images', express.static(path.resolve(__dirname, './images'))); //image
+// app.use('/', express.static(path.resolve(__dirname, './client/build')));
+// app.get('*', (req, res, next) => {
+//   if (req.path.split('/')[1] === 'static') return next();
+//   res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+// });
 
-app.use('/', express.static(path.resolve(__dirname, './client/build')));
-app.get('*', (req, res, next) => {
-  if (req.path.split('/')[1] === 'static') return next();
-  res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+// ECONNRESET 에러 대책
+// catch unCaughtException
+process.on('uncaughtException', function (err) {
+  console.error('uncaughtException (Node is alive)', err);
 });
 
 app.listen(app.get('port'), () => {});
