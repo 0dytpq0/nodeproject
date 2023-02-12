@@ -604,7 +604,8 @@ connection.query(sql, (error, rows) => {
       log(carInfo);
       if (carInfo.length > 0) {
         let car = carInfo[0];
-
+        console.log('car', car);
+        console.log('car length', car.length);
         if (car.substring(0, 2) === 'OK' && car.length >= 7) {
           if (car.includes('CH0')) {
             carInfo[0] = 'CH0';
