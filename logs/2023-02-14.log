@@ -1192,3 +1192,33 @@
 {"level":"info","message":"TCPIP connected ","timestamp":"2023-02-14 12:44:44"}
 {"level":"info","message":"parsedValue.IP, parsedValue.PORT undefined undefined ","timestamp":"2023-02-14 12:44:44"}
 {"level":"info","message":"connected to server! ","timestamp":"2023-02-14 12:44:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:45:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-14 12:45:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-14 12:45:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:46:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-14 12:46:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-14 12:46:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:47:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-14 12:47:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-14 12:47:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:48:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-14 12:48:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-14 12:48:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:49:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-14 12:49:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-14 12:49:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:50:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-14 12:50:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-14 12:50:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:51:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-14 12:51:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-14 12:51:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:52:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-14 12:52:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-14 12:52:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:53:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-14 12:53:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-14 12:53:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-14 12:54:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-14 12:54:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-14 12:54:44"}
