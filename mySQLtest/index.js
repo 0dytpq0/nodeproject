@@ -9,6 +9,7 @@ const app = express();
 const path = require('path');
 const axios = require('axios');
 const moment = require('moment');
+const log = require('./logger');
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -18,11 +19,6 @@ app.set('port', process.env.PORT || 4000);
 // app.get('/', (req, res) => {
 //   res.send('Root');
 // });
-function log(...text) {
-  for (let i = 0; i < text.length; i++) {
-    console.log(text[i]);
-  }
-}
 
 // app.get('/carinfoitems', (req, res) => {
 //   let { carNo } = req.query;
@@ -38,6 +34,29 @@ function log(...text) {
 //   });
 // });
 
+//시간을 보내줌으로써 node 살아있는지 확인을 위한 get
+app.get('/Time', (req, res) => {
+  const now = new Date();
+  let yyyy = now.getFullYear().toString();
+  let mm = (now.getMonth() + 1).toString();
+  mm = mm[1] ? mm : '0' + mm[0];
+  let dd = now.getDate().toString();
+  dd = dd[1] ? dd : '0' + dd[0];
+
+  let HH = now.getHours().toString();
+  HH = HH[1] ? HH : '0' + HH[0];
+
+  let mi = now.getMinutes().toString();
+  mi = mi[1] ? mi : '0' + mi[0];
+
+  let ss = now.getSeconds().toString();
+  ss = ss[1] ? ss : '0' + ss[0];
+
+  let newNow = HH + ':' + mi + ':' + ss;
+
+  res.send({ Time: newNow });
+});
+
 app.get('/carinfoitemsall', (req, res) => {
   log('get', 'carinfoitemsall_carShowModa');
 
@@ -46,7 +65,7 @@ app.get('/carinfoitemsall', (req, res) => {
     "SELECT ifnull(ID, '') ID , ifnull(Address, '') Address , ifnull(Area, '') Area , ifnull(AreaType, '') AreaType , ifnull(CAttached, '') CAttached , ifnull(CName, '') CName , ifnull(CPhone, '') CPhone , ifnull(CPosition, '') CPosition , ifnull(DContent, '') DContent , ifnull(EAttached, '') EAttached , ifnull(EName, '') EName , ifnull(EPhone, '') EPhone , ifnull(EPoint, '') EPoint , ifnull(EPosition, '') EPosition , ifnull(ImagePath, '') ImagePath , ifnull(IssueDate, '') IssueDate , ifnull(Number, '') Number , ifnull(Owner, '') Owner , ifnull(Phone, '') Phone , ifnull(PointName, '') PointName , ifnull(PrintIndex, '') PrintIndex , ifnull(Purpose, '') Purpose , ifnull(RegistryDate, '') RegistryDate , ifnull(SPoint, '') SPoint , ifnull(RegNumber, '') RegNumber , ifnull(GpsNumber, '') GpsNumber" +
     ", ifnull(flagYN, '') flagYN from carinfoitems where Number like '%" +
     CarNo +
-    "%'";
+    "%' and id IN (SELECT max(id) ID  FROM carinfoitems GROUP BY NUMBER  ORDER BY registryDate desc )GROUP BY number limit 100;";
   connection.query(sql, (error, rows) => {
     if (error) throw error;
     res.send(rows);
@@ -549,7 +568,7 @@ connection.query(sql, (error, rows) => {
           .on('connect', socketRun)
           .on('data', socketData);
       } catch (error) {}
-    }, 1000 * 10);
+    }, 1000 * 60);
   });
   function socketRun() {
     log('connected to server!');
@@ -583,7 +602,7 @@ connection.query(sql, (error, rows) => {
       sendTime = Date.now();
       isOk = false;
       log('mqtt timer');
-    }, 1000 * 10);
+    }, 1000 * 60);
   }
   function socketData(chunk) {
     log('socketData(cctv 사진 데이터)', chunk.length, chunk);
@@ -604,8 +623,6 @@ connection.query(sql, (error, rows) => {
       log(carInfo);
       if (carInfo.length > 0) {
         let car = carInfo[0];
-        console.log('car', car);
-        console.log('car length', car.length);
         if (car.substring(0, 2) === 'OK' && car.length >= 7) {
           if (car.includes('CH0')) {
             carInfo[0] = 'CH0';
