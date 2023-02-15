@@ -558,6 +558,8 @@ connection.query(sql, (error, rows) => {
       log('Reconnecting...');
       interval = setInterval(() => {
         try {
+          //소켓 쌓임 해결
+          socket.destroy();
           socket = net
             .connect({
               host: parsedValue.TCPIP,
@@ -566,6 +568,7 @@ connection.query(sql, (error, rows) => {
             .on('error', () => {
               log('error', '연결실패');
 
+              console.log(1111);
               // failCount += 1;
               // client.publish(
               //   'CCTV',
@@ -575,20 +578,17 @@ connection.query(sql, (error, rows) => {
               failCount += 1;
               successCount = 0;
               // fail 3번마다 실행
-              if (failCount % 3 === 0) {
-                client.publish(
-                  'CCTV',
-                  `{"CMD": "CCTVISOK","STATUS": ${0},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
-                );
-              }
-
-              socket.write(bytes);
-              sendTime = Date.now();
+              // if (failCount % 3 === 0) {
+              client.publish(
+                'CCTV',
+                `{"CMD": "CCTVISOK","STATUS": ${0},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
+              );
+              // }
             })
             .on('connect', socketRun)
             .on('data', socketData);
         } catch (error) {}
-      }, 1000 * 5);
+      }, 1000 * 3);
     }
   });
   function socketRun() {
@@ -613,6 +613,7 @@ connection.query(sql, (error, rows) => {
       `{"CMD": "CCTVISOK","STATUS": ${1},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
     );
     //시간표시
+
     socket.write(bytes);
     sendTime = Date.now();
     log('mqtt timer');
