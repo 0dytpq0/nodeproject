@@ -1,0 +1,741 @@
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:11"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:21"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:26"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:31"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:36"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:41"}
+{"level":"info","message":"post carinfoitems_app.js ","timestamp":"2023-02-15 17:19:43"}
+{"level":"info","message":"get settingitemsConfig_app.js settingitemsConfig_ipChange ","timestamp":"2023-02-15 17:19:43"}
+{"level":"info","message":"post websend_app.js ","timestamp":"2023-02-15 17:19:43"}
+{"level":"info","message":"post parsedValue?.WEBURL(nodejs) ","timestamp":"2023-02-15 17:19:43"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:47"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:52"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:19:57"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:20:02"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:20:07"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:20:12"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:21:09"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:21:09"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:21:09"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:21:09"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:21:09"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:21:14"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:21:14"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:21:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 71 \u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:21:15"}
+{"level":"info","message":"CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:21:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:21:19"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:21:19"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:21:19"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:21:19"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:21:24"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:21:24"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:21:24"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:21:24"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:26"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:29"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:34"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:39"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:44"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:21:49"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:21:54"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:21:54"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:21:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:21:55"}
+{"level":"info","message":"CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:21:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:21:59"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:22:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:22:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:22:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:22:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:22:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:22:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:22:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:22:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:22:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:22:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:22:10"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:20"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:35"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:40"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:45"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:50"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:22:55"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:00"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:05"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:20"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:35"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:40"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:45"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:23:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:23:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:23:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:23:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:23:55"}
+{"level":"info","message":"CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:23:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:24:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:24:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:24:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:24:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:24:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:24:10"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:24:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:24:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:20"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:35"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:40"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:24:44"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:24:44"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:24:44"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:24:44"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:24:44"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:24:49"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:54"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:54"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:24:59"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:24:59"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:25:04"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:25:04"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:25:09"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:25:09"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:10"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:25:16"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:25:16"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:25:16"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:25:16"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:25:16"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:21"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:26"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:31"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:25:36"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:25:36"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:25:41"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:25:41"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:25:46"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:25:46"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:48"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:48"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:48"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:51"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:25:56"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:26:01"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:26:01"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:26:06"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:26:06"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:26:11"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:26:11"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:26:15"}
+{"level":"info","message":"Error: read ECONNRESET ","timestamp":"2023-02-15 17:26:33"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:26:33"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:26:33"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:26:38"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:26:43"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:26:48"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:26:53"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:26:58"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:03"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:08"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:18"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:23"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:27:28"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:31:24"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:31:24"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:31:24"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:31:24"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:31:24"}
+{"level":"info","message":"get carinfoitemsallPrintIndex_printCompleted ","timestamp":"2023-02-15 17:31:25"}
+{"level":"info","message":"get settingitems_actorButtonViewContainer settingitems_buttonContainerArea settingitems_carInfoContainer settingitems_checkerButtonViewContainer settingitems_ipChange ","timestamp":"2023-02-15 17:31:29"}
+{"level":"info","message":"get settingitems_actorButtonViewContainer settingitems_buttonContainerArea settingitems_carInfoContainer settingitems_checkerButtonViewContainer settingitems_ipChange ","timestamp":"2023-02-15 17:31:29"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:31:29"}
+{"level":"info","message":"put settingitems_carinfoContainer settingitems_ipChange ","timestamp":"2023-02-15 17:31:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:34"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:34"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:31:34"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:31:34"}
+{"level":"info","message":"CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:31:34"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:39"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:39"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:31:39"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:31:39"}
+{"level":"info","message":"post carinfoitems_app.js ","timestamp":"2023-02-15 17:31:42"}
+{"level":"info","message":"get settingitemsConfig_app.js settingitemsConfig_ipChange ","timestamp":"2023-02-15 17:31:42"}
+{"level":"info","message":"post websend_app.js ","timestamp":"2023-02-15 17:31:42"}
+{"level":"info","message":"post parsedValue?.WEBURL(nodejs) ","timestamp":"2023-02-15 17:31:42"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:31:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:31:44"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:49"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:49"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:31:49"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:31:49"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:54"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:54"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:31:54"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:31:54"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:31:59"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:31:59"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:31:59"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:31:59"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:04"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:04"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:32:04"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:32:04"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:09"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:09"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:32:09"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:32:09"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:14"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:14"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:32:14"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:32:14"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:19"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:19"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:32:19"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:32:19"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:24"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:24"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:32:24"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:32:24"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:29"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:29"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:32:29"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:32:29"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:34"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:34"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:32:34"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:32:34"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:39"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:32:39"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:32:39"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:39"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:44"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:32:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:32:44"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:49"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:32:49"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:49"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:32:49"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:54"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:54"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:32:54"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:32:54"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:32:59"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:32:59"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:32:59"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:32:59"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:04"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:04"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:33:04"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:33:04"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:09"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:09"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:33:09"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:33:09"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:14"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:14"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:33:14"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:33:14"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:19"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:19"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:33:19"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:33:19"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:24"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:24"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:33:24"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:33:24"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:29"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:29"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:33:30"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:33:30"}
+{"level":"info","message":"CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:33:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:34"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:34"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:33:34"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:33:34"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:39"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:39"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:33:39"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:33:39"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:44"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:44"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:33:44"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:33:44"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:49"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:49"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:33:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:33:50"}
+{"level":"info","message":"CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:33:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:54"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:54"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:33:54"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:33:54"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:33:59"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:33:59"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:33:59"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:33:59"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:04"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:04"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:34:04"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:34:04"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:09"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:09"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:34:09"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:34:09"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:14"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:14"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:34:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:34:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:19"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:19"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:34:19"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:34:19"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:24"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:24"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:34:24"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:34:25"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:29"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:29"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:34:29"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:34:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:34"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:34"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:34:35"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:34:35"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:40"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:34:40"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:34:40"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:45"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:45"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:34:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:34:45"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:50"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:34:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:34:50"}
+{"level":"info","message":"CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:34:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:34:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:34:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:34:55"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:34:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:35:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:35:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:35:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:35:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:35:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:35:10"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:35:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:35:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:20"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:20"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:35:20"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:35:20"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:25"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:25"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:35:25"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:35:25"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:30"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:30"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:35:30"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:35:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:35"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:35:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 71 \u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:35:35"}
+{"level":"info","message":"CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:35:35"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:40"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:35:40"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:35:40"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:45"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:35:45"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:35:45"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:50"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:35:50"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:35:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:35:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:35:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:35:55"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:35:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:36:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:36:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:36:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:36:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:36:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:36:10"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:36:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:36:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:20"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:20"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:36:20"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:36:20"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:25"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:25"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:36:25"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:36:25"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:30"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:30"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:36:30"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:36:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:35"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:36:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:36:35"}
+{"level":"info","message":"CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:36:35"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:40"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:36:40"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:36:40"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:45"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:36:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:36:45"}
+{"level":"info","message":"CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:36:45"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:50"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:50"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:36:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:36:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:36:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:36:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:36:55"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:36:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:37:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:37:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:37:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:37:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:37:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:37:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:37:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:37:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:20"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:20"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:37:20"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:37:20"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:25"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:25"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:37:25"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:37:25"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:30"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:30"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:37:30"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:37:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:35"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:37:35"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:37:35"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:40"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:37:40"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:37:40"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:45"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:37:45"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:37:45"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:50"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:37:50"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:37:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:37:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:37:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#766��5677#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766��5677.jpg\u0003 ","timestamp":"2023-02-15 17:37:55"}
+{"level":"info","message":"OK\u0003\u0002CH0,766부5677,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_766부5677.jpg ","timestamp":"2023-02-15 17:37:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:38:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:38:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:38:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:38:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:38:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:38:10"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:15"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:15"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:38:15"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:38:15"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:20"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:20"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:38:20"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:38:20"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:25"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:25"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:38:25"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:38:25"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:30"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:30"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:38:30"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:38:30"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:35"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:38:35"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:38:35"}
+{"level":"info","message":"CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:38:35"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:40"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:38:40"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:38:40"}
+{"level":"info","message":"CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:38:40"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:45"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:45"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:38:45"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:38:45"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:50"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:38:50"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#882��0578#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882��0578.jpg\u0003 ","timestamp":"2023-02-15 17:38:50"}
+{"level":"info","message":"CH0,882무0578,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152724_882무0578.jpg ","timestamp":"2023-02-15 17:38:50"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:38:55"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:38:55"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:38:55"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:38:55"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:39:00"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:39:00"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#566��1235#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566��1235.jpg\u0003 ","timestamp":"2023-02-15 17:39:00"}
+{"level":"info","message":"OK\u0003\u0002CH0,566부1235,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_566부1235.jpg ","timestamp":"2023-02-15 17:39:00"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:39:05"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:39:05"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#P#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233��1232.jpg\u0003 ","timestamp":"2023-02-15 17:39:05"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,P,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_233부1232.jpg ","timestamp":"2023-02-15 17:39:05"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:39:10"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:39:10"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#455��1234#O#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455��1234.jpg\u0003 ","timestamp":"2023-02-15 17:39:10"}
+{"level":"info","message":"OK\u0003\u0002CH0,455부1234,O,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_455부1234.jpg ","timestamp":"2023-02-15 17:39:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:13"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:14"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:20"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:25"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:35"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:40"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:45"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:50"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:39:55"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:00"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:05"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:10"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:15"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:20"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:40:25"}
+{"level":"info","message":"post websend_app.js ","timestamp":"2023-02-15 17:40:25"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:40:25"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:40:25"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:40:26"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:40:26"}
+{"level":"info","message":"post parsedValue?.WEBURL(nodejs) ","timestamp":"2023-02-15 17:40:26"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:40:28"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:40:28"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:40:28"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:40:28"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:40:28"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:33"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:38"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:43"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:48"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:40:53"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:40:58"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:40:58"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 4 \u0002OK\u0003 ","timestamp":"2023-02-15 17:40:58"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 74 \u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:40:58"}
+{"level":"info","message":"CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:40:58"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:03"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:03"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:41:03"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:41:03"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:08"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:08"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:41:08"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:41:08"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:13"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:13"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#677��1236#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677��1236.jpg\u0003 ","timestamp":"2023-02-15 17:41:13"}
+{"level":"info","message":"OK\u0003\u0002CH0,677부1236,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_677부1236.jpg ","timestamp":"2023-02-15 17:41:13"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:18"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:18"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:41:18"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:41:18"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:23"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:23"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 75 \u0002OK\u0003\u0002CH0#���ν�#X#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344��1233.jpg\u0003 ","timestamp":"2023-02-15 17:41:23"}
+{"level":"info","message":"OK\u0003\u0002CH0,미인식,X,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_344부1233.jpg ","timestamp":"2023-02-15 17:41:23"}
+{"level":"info","message":"connected to server! ","timestamp":"2023-02-15 17:41:28"}
+{"level":"info","message":"mqtt timer ","timestamp":"2023-02-15 17:41:28"}
+{"level":"info","message":"socketData(cctv 사진 데이터) 78 \u0002OK\u0003\u0002CH0#105��6471#N#c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105��6471.jpg\u0003 ","timestamp":"2023-02-15 17:41:28"}
+{"level":"info","message":"OK\u0003\u0002CH0,105부6471,N,c:\\LPR\\SR0101001\\2018\\05\\01\\20190108152652_105부6471.jpg ","timestamp":"2023-02-15 17:41:28"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:30"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:33"}
+{"level":"info","message":"error 연결실패 ","timestamp":"2023-02-15 17:41:38"}
+{"level":"info","message":"TCPIP connected ","timestamp":"2023-02-15 17:41:42"}
+{"level":"info","message":"parsedValue.IP, parsedValue.PORT 127.0.0.1 15000 ","timestamp":"2023-02-15 17:41:42"}
+{"level":"info","message":"Error: connect ECONNREFUSED 127.0.0.1:15000 ","timestamp":"2023-02-15 17:41:42"}
+{"level":"info","message":"close connection  closed -> true ","timestamp":"2023-02-15 17:41:42"}
+{"level":"info","message":"Reconnecting... ","timestamp":"2023-02-15 17:41:42"}

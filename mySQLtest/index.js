@@ -548,61 +548,74 @@ connection.query(sql, (error, rows) => {
     });
   } catch (error) {}
   let interval = null;
+  let intervalFail = null;
   let retrying = false;
   socket.on('close', function (e) {
     log('close', 'connection  closed -> ' + e);
     if (!retrying) {
       retrying = true;
+
       log('Reconnecting...');
+      interval = setInterval(() => {
+        try {
+          socket = net
+            .connect({
+              host: parsedValue.TCPIP,
+              port: Number(parsedValue.TCPPORT),
+            })
+            .on('error', () => {
+              log('error', '연결실패');
+
+              // failCount += 1;
+              // client.publish(
+              //   'CCTV',
+              //   `{"CMD": "CCTVISOK","STATUS": ${0},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
+              // );
+              //연결 실패시 publish successCount = 0
+              failCount += 1;
+              successCount = 0;
+              // fail 3번마다 실행
+              if (failCount % 3 === 0) {
+                client.publish(
+                  'CCTV',
+                  `{"CMD": "CCTVISOK","STATUS": ${0},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
+                );
+              }
+
+              socket.write(bytes);
+              sendTime = Date.now();
+            })
+            .on('connect', socketRun)
+            .on('data', socketData);
+        } catch (error) {}
+      }, 1000 * 5);
     }
-    interval = setInterval(() => {
-      try {
-        socket = net
-          .connect({
-            host: parsedValue.TCPIP,
-            port: Number(parsedValue.TCPPORT),
-          })
-          .on('error', () => {
-            log('error', '연결실패');
-          })
-          .on('connect', socketRun)
-          .on('data', socketData);
-      } catch (error) {}
-    }, 1000 * 60);
   });
   function socketRun() {
     log('connected to server!');
-    if (interval !== null) {
-      clearInterval(interval);
-    }
+    // if (interval !== null) {
+    //   clearInterval(interval);
+    // }
+
+    // successCount += 1;
+
+    // client.publish(
+    //   'CCTV',
+    //   `{"CMD": "CCTVISOK","STATUS": ${1},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
+    // );
+
     // 1000ms의 간격으로 banana hong을 서버로 요청
-    setInterval(function () {
-      isOk
-        ? (false, (failCount = 0), (successCount += 1))
-        : ((failCount += 1), (successCount = 0));
-
-      client.publish(
-        'CCTV',
-        `{"CMD": "CCTVISOK","STATUS": ${
-          isOk ? 1 : 0
-        },"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
-      ); //publish 성공
-      if (failCount > 3) {
-        client.publish(
-          'CCTV',
-          `{"CMD": "CCTVISFAIL","STATUS": ${
-            isOk ? 1 : 0
-          },"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
-        );
-        failCount = 0;
-      }
-      //send mqtt 실패 message -> 웹에서 똑딱
-
-      socket.write(bytes);
-      sendTime = Date.now();
-      isOk = false;
-      log('mqtt timer');
-    }, 1000 * 60);
+    //연결 성공시 publish, failCount = 0
+    successCount += 1;
+    failCount = 0;
+    client.publish(
+      'CCTV',
+      `{"CMD": "CCTVISOK","STATUS": ${1},"SUCCESSCOUNT":${successCount},"FAILCOUNT":${failCount},"dateTime":"${dateTime}"}`
+    );
+    //시간표시
+    socket.write(bytes);
+    sendTime = Date.now();
+    log('mqtt timer');
   }
   function socketData(chunk) {
     log('socketData(cctv 사진 데이터)', chunk.length, chunk);
@@ -661,15 +674,19 @@ connection.query(sql, (error, rows) => {
   socket?.on('timeout', function () {
     log('connection timeout.');
   });
-  log('parsedValue.IP, parsedValue.PORT', parsedValue.IP, parsedValue.PORT);
+  log(
+    'parsedValue.IP, parsedValue.PORT',
+    parsedValue.TCPIP,
+    parsedValue.TCPPORT
+  );
 });
 
 app.use('/images', express.static(path.resolve(__dirname, './images'))); //image
-app.use('/', express.static(path.resolve(__dirname, './client/build')));
-app.get('*', (req, res, next) => {
-  if (req.path.split('/')[1] === 'static') return next();
-  res.sendFile(path.resolve(__dirname, './client/build/index.html'));
-});
+// app.use('/', express.static(path.resolve(__dirname, './client/build')));
+// app.get('*', (req, res, next) => {
+//   if (req.path.split('/')[1] === 'static') return next();
+//   res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+// });
 
 // ECONNRESET 에러 대책
 // catch unCaughtException

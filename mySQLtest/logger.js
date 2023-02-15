@@ -16,7 +16,7 @@ function log(...text) {
     for (let i = 0; i < text.length; i++) {
       str += text[i] + ' ';
     }
-    console.log(str);
+    console.log(timezoned() + ' ' + str);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir);
     }
