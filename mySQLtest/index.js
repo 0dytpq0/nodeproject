@@ -588,7 +588,7 @@ connection.query(sql, (error, rows) => {
             .on('connect', socketRun)
             .on('data', socketData);
         } catch (error) {}
-      }, 1000 * 3);
+      }, 1000 * 60);
     }
   });
   function socketRun() {
@@ -683,11 +683,11 @@ connection.query(sql, (error, rows) => {
 });
 
 app.use('/images', express.static(path.resolve(__dirname, './images'))); //image
-// app.use('/', express.static(path.resolve(__dirname, './client/build')));
-// app.get('*', (req, res, next) => {
-//   if (req.path.split('/')[1] === 'static') return next();
-//   res.sendFile(path.resolve(__dirname, './client/build/index.html'));
-// });
+app.use('/', express.static(path.resolve(__dirname, './client/build')));
+app.get('*', (req, res, next) => {
+  if (req.path.split('/')[1] === 'static') return next();
+  res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+});
 
 // ECONNRESET 에러 대책
 // catch unCaughtException
